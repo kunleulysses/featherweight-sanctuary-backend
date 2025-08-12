@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["npc_id","archetype","dialogue_file"],
+  "properties": {
+    "npc_id": {"type":"string"},
+    "archetype": {"type":"string"},
+    "drives": {"type":"object"},
+    "relationship_axes": {"type":"object"},
+    "voice": {"type":"string"},
+    "dialogue_file": {"type":"string"},
+    "gifts": {"type":"array","items":{"type":"string"}}
+  }
+}

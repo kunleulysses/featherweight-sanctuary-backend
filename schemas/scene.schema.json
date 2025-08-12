@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["scene_id","biome","nodes"],
+  "properties": {
+    "scene_id": {"type":"string"},
+    "biome": {"type":"string"},
+    "lighting": {"type":"string"},
+    "nodes": {"type":"array","items":{"type":"object","required":["id","prefab","pos"],"properties":{"id":{"type":"string"},"prefab":{"type":"string"},"pos":{"type":"array","items":{"type":"number"},"minItems":3,"maxItems":3},"rot":{"type":"array","items":{"type":"number"},"minItems":3,"maxItems":3},"affordances":{"type":"array","items":{"type":"string"}}}}},
+    "navmesh": {"type":"string"}
+  }
+}

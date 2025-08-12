@@ -1,0 +1,26 @@
+{
+  "name": "featherweight-sanctuary-backend",
+  "version": "0.0.1",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "dev": "node --watch src/api/server.mjs",
+    "start": "node src/api/server.mjs",
+    "lint": "eslint .",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "inkjs": "^1.13.1",
+    "prom-client": "^15.1.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.10.0"
+  }
+}
