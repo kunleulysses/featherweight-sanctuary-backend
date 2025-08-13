@@ -69,3 +69,19 @@ router.post("/quest/propose", async (req, res) => {
     return res.status(500).json({ ok: false, error: e?.message });
   }
 });
+
+
+// Scene fixture fetch
+import fs from 'fs';
+import path from 'path';
+router.get('/scene/fixture/:id', async (req, res) => {
+  try {
+    const id = String(req.params.id||'').replace(/[^a-zA-Z0-9_\-]/g,'');
+    const file = path.resolve('./fixtures', `${id}.scene.json`);
+    if (!fs.existsSync(file)) return res.status(404).json({ ok:false, error:'not-found' });
+    const payload = JSON.parse(fs.readFileSync(file,'utf8'));
+    const out = validatePackage('scene', payload);
+    if (!out.ok) return res.status(400).json({ ok:false, error:'schema', details: out });
+    res.json({ ok:true, scene: payload });
+  } catch(e){ res.status(500).json({ ok:false, error: e?.message }); }
+});
