@@ -1,0 +1,17 @@
+name: backend-ci
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ v0-foundations ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run lint --if-present
+      - run: node scripts/validate-fixtures.mjs
