@@ -1,0 +1,12 @@
+{
+  "scene_id":"forest_of_hesitation",
+  "biome":"nocturnal_forest",
+  "lighting":"moonshafts_low_fog",
+  "nodes":[
+    {"id":"forest_gate","prefab":"gate_glow","pos":[6,0,12],"rot":[0,180,0],"affordances":["interact"]},
+    {"id":"memory_orb","prefab":"orb_soft","pos":[-2,1,9],"rot":[0,0,0],"affordances":["carry","listen"]}
+  ],
+  "navmesh":"forest_basic",
+  "vfx":["drifting_spores"],
+  "sfx_beds":["distant_rain_low"]
+}

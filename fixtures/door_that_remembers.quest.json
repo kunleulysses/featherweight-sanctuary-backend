@@ -1,0 +1,18 @@
+{
+  "quest_id": "door_that_remembers",
+  "title": "The Door That Remembers",
+  "synopsis": "Face a memory you keep avoiding and offer it to the door.",
+  "tags": ["healing","courage","forest","moonlight"],
+  "preconditions": [{"stat":"trust_bird","gte":0.3}],
+  "stages": [
+    { "id": "find_forest", "goals": [{"type":"navigate","target":"@loc.forest_gate"}], "hints": ["Follow the low cello drone."] },
+    { "id": "offer_memory", "goals": [{"type":"ritual","ritual_id":"memory_offering"}], "checks": [{"type":"journal_contains","keywords":["door","decision","fear"]}] }
+  ],
+  "npcs": ["none"],
+  "rewards": [
+    {"type":"trait_unlock","trait":"Remembrance"},
+    {"type":"sanctuary_mutation","mutation":"grow_tree_memory_oak"}
+  ],
+  "music_cues": ["slow_strings_rise"],
+  "camera_style": "intimate_handheld"
+}

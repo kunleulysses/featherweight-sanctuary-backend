@@ -1,0 +1,9 @@
+{
+  "npc_id":"archivist_anon",
+  "archetype":"mentor_forgotten",
+  "drives":{"seek_name":0.9,"avoid_pain":0.6},
+  "relationship_axes":{"trust":0.2,"respect":0.5,"mystery":0.8},
+  "voice":"dusty_warm_slow",
+  "dialogue_file":"archivist_anon.ink",
+  "gifts":["page_fragment","binding_thread"]
+}
